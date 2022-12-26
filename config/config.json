@@ -1,0 +1,8 @@
+{
+  "server_port": 50051,
+  "skip_frame_count": 5,
+  "track_max_age": 30,
+  "response_frame_quality": 40,
+  "debug_mode": false,
+  "center_box_threshold": 20
+}

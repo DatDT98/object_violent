@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  forgot-service:
+    image: forgot_service:latest
+    #restart: always
+    volumes:
+      - ./:/forgot-object
+    ports:
+      - 8006:50051
+    entrypoint: ["python3.6", "main.py" ]
+

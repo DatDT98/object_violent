@@ -1,0 +1,7 @@
+{
+  "ERROR_801": "image_base64 is empty.",
+  "ERROR_802": "Invalid image_base64: Cannot decode image_base64.",
+  "ERROR_803": "Cannot read source_url: {}",
+  "ERROR_804": "Invalid area with x = {}, y = {}, width = {}, height = {}",
+  "ERROR_805": "Invalid websocket source url: {}"
+}

@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+
+service ObjectService {
+    rpc ViolateObjectDetect(ObjectRequest) returns (stream DetectObjResponse){}
+    rpc LeaveObjectDetect(ObjectRequest) returns (stream DetectObjResponse){}
+    rpc ForgotObjectDetect(ObjectRequest) returns (stream DetectObjResponse){}
+
+}
+
+message ObjectRequest {
+    string ws = 1;
+    repeated Area areas = 2;
+}
+message Area {
+    string area_id = 1;
+    Box detection_area = 2;
+    repeated Point poly = 3;
+}
+message Point {
+    float x = 1;
+    float y = 2;
+}
+message DetectObjResponse {
+    repeated Obj forgot_obj = 1;
+    double timestamp = 2;
+    bytes image_bytes = 3;
+    bool send = 4;
+}
+message Obj {
+    float confidence = 1;
+    Box bounding_box = 2;
+    string track_id = 3;
+}
+
+message Box {
+    float x = 1;
+    float y = 2;
+    float width = 3;
+    float height = 4;
+}
+
